@@ -125,7 +125,7 @@ let sortByRequired = (props) =>{
         let filter = inputData.toUpperCase().trim();
         
         searchData  = studentdata.filter((ele)=>{
-           return filter==ele.first_name.toUpperCase() || filter==ele.id || filter==ele.last_name.toUpperCase() || filter==ele.marks || filter==ele.class || filter==ele.email.toUpperCase() || filter==ele.first_name.toUpperCase()+" "+ele.last_name.toUpperCase();
+           return filter==ele.first_name.toUpperCase() || filter==ele.id || filter==ele.last_name.toUpperCase() || filter==ele.marks || filter==ele.class || filter==ele.email.toUpperCase() || filter==ele.first_name.toUpperCase()+" "+ele.last_name.toUpperCase() || filter==ele.gender.toUpperCase();
          })
         if(searchData && searchData.length>0){
             removeTbodyChild();
