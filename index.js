@@ -111,14 +111,15 @@ function addRowInTable(studentData){
      const tbody = document.getElementById("myTable");
      for (let i = 0; i < studentData.length; i++) {
             let e = studentData[i];
+            
             const tr = document.createElement("tr");
             tr.innerHTML = `<td>${e.id}</td>
                            <td>${e.first_name} ${e.last_name}</td>
                            <td>${e.gender}</td>
                            <td>${e.class}</td>
                            <td>${e.marks}</td>
-                           <td>${e.passing}</td>
-                           <td>${e.email}</td>  `;
+                           <td>${e.passing ? "Paased":"Failed"}</td>
+                           <td>${e.email}</td>`;
                  tbody.appendChild(tr);
               }
     }
