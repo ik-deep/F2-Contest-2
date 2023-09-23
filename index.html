@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend-2_Contest-2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src=
+    "https://code.jquery.com/jquery-3.5.1.js">
+        </script>
+</head>
+<body>
+    <div class="container">
+        <nav>Student Portal</nav>
+        <div class="search">
+            <input class="search_field" id="search"  name="search" placeholder="Search...">
+            <button class="search-button" onclick="searchResult()">Search</button>
+        </div>
+        <div>
+            <button class="sort_A_Z" onclick="sortByRequired('first_name')">Sort A to Z</button>
+            <button class="sort_A_Z" onClick="sort_Z_A('first_name')">Sort Z to A</button>
+            <button class="sort_A_Z" onClick="sortByRequired('marks')">Sort By Marks</button>
+            <button class="sort_A_Z" onClick="sortByRequired('passing')">Sort By Passing</button>
+            <button class="sort_A_Z" onClick="sortByRequired('class')">Sort By Class</button>
+            <button class="sort_A_Z" onClick="sortByRequired('gender')"> Sort By Gender</button>
+        </div>
+        <div class="data-field">
+            <table>
+                <thead>
+                   <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Class</th>
+                    <th>Marks</th>
+                    <th>Passing</th>
+                    <th>Email</th>
+                   </tr>
+                </thead>
+                <tbody id="myTable">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
