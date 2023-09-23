@@ -121,14 +121,19 @@ let sortByRequired = (props) =>{
  let searchResult=()=>{
     var inputData = document.getElementById("search").value;
     let searchData=[];
-    if(inputData.toUpperCase != null){  
-        let filter = inputData.toUpperCase()
-        removeTbodyChild();
+    if(inputData!= "" ){  
+        let filter = inputData.toUpperCase().trim();
+        
         searchData  = studentdata.filter((ele)=>{
-           return filter==ele.first_name.toUpperCase() || filter==ele.id || filter==ele.last_name.toUpperCase() || filter==ele.marks || filter==ele.class || filter==ele.email.toUpperCase();
+           return filter==ele.first_name.toUpperCase() || filter==ele.id || filter==ele.last_name.toUpperCase() || filter==ele.marks || filter==ele.class || filter==ele.email.toUpperCase() || filter==ele.first_name.toUpperCase()+" "+ele.last_name.toUpperCase();
          })
-         console.log(searchData)
-         addRowInTable(searchData);
+        if(searchData && searchData.length>0){
+            removeTbodyChild();
+            addRowInTable(searchData);
+        }
+         else{
+            alert("Data not found. Please enter the valid text !!")
+         }
      }else{
         alert("Please enter the valid text!!")
      }
